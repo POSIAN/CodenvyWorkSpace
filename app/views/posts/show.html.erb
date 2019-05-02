@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p class="title">
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+
+<p class="photo">
+  <img src="<%= @post.photo %>">
+</p>
+
+<p class="content">
+  <strong>Content:</strong>
+  <%= @post.content %>
+</p>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<!-- add this -->
+
+<%= link_to 'Delete', post_path(@post), method: :delete %> |
+<%= link_to 'Back', posts_path %>
